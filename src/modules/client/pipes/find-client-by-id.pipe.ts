@@ -1,7 +1,7 @@
 import { Inject, Injectable, Scope } from '@nestjs/common';
 import { REQUEST } from '@nestjs/core';
 import { Request } from 'express';
-import { throwNotFound } from 'src/common/global/errors/handle-not-found';
+import { handleNotFound } from 'src/common/global/errors';
 import { BaseValidationPipe } from 'src/common/pipes/base-validation.pipe';
 import { ClientRepository } from 'src/data/dababase/repositories/client.repository';
 
@@ -18,10 +18,10 @@ export class FindClientByIdPipe extends BaseValidationPipe {
     const client = await this.clientRepository.findByPrimaryKey(param.id);
 
     if (!client) {
-      throwNotFound('Client not found in database');
+      handleNotFound('Client not found in database');
       return false;
     }
 
-    // return true;
+    return true;
   }
 }
