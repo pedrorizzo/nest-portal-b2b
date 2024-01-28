@@ -14,7 +14,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: process.env.DATABASE_NAME,
       connectTimeoutMS: 60000,
       migrationsRun: true,
-      logging: false,
+      logging: true,
       logger: 'file',
       entities: [__dirname + '/entities/*.js'],
       migrations: [__dirname + '/migrations/*.js'],

@@ -14,7 +14,7 @@ export class ClientService implements ClientServiceContract {
   ): Promise<FindClientResponseDto> {
     const client = await this.clientRepository.findByPrimaryKey(params.id);
     if (!client) {
-      handleNotFound(client, 'Client not found');
+      handleNotFound('Client not found');
     }
     return FindClientResponseDto.fromObject(client);
   }
