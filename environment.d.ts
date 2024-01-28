@@ -5,6 +5,8 @@ declare global {
       API_HOST: string;
       API_PORT: number;
       TZ: string;
+      PASSWORD_HASH: string;
+      PASSWORD_SALT: number;
       API_PASSWORD_SECRET: string;
       API_TOKEN_SECRET: string;
       DATABASE_DIALECT: string;
