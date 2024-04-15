@@ -22,6 +22,9 @@ export class FilterExceptionIntercaptor implements ExceptionFilter {
       exception?.message ||
       'Internal Server Error';
 
-    return response.status(status).json({ status: status, errors: errors });
+    return response.status(status).json({
+      status: status,
+      errors: Array.isArray(errors) ? errors : [errors],
+    });
   }
 }

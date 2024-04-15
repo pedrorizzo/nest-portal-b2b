@@ -17,4 +17,13 @@ export abstract class BaseRepository<T extends BaseEntity> {
   async findByPrimaryKey(id: any): Promise<T> {
     return this._repository.findOne({ where: { id: id } });
   }
+
+  async save(data: T): Promise<T> {
+    const aftermath = await this._repository.save(data);
+    return this.findByPrimaryKey(aftermath.id);
+  }
+
+  async delete(pk: any): Promise<boolean> {
+    return (await this._repository.delete({ id: pk })).affected > 0;
+  }
 }

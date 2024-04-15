@@ -45,7 +45,7 @@ async function bootstrap() {
   // app = initializeMiddlewares(app);
 
   await app.listen(env.API_PORT, env.API_HOST).then(() => {
-    logger.warn(`Server running on http://${env.API_HOST}:${env.API_PORT}/api`);
+    logger.log(`Server running on http://${env.API_HOST}:${env.API_PORT}/api`);
   });
 }
 bootstrap();

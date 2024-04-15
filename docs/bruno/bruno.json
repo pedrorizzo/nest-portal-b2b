@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Nest B2B",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

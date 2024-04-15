@@ -8,7 +8,7 @@ export class FindClientRequestDto {
     name: 'id',
     type: 'string',
     required: true,
-    description: 'client identification code',
+    description: 'client uuid identification code',
   })
   @Type(() => String)
   @IsString()

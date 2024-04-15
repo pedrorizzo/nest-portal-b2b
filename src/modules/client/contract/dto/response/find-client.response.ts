@@ -1,5 +1,5 @@
 import { ApiResponseProperty } from '@nestjs/swagger';
-import { ClientEntity } from 'src/data/dababase/entities/client.entity';
+import { ClientEntity } from 'src/data/dababase/entities/client/client.entity';
 
 export class FindClientResponseDto {
   @ApiResponseProperty({ type: String })

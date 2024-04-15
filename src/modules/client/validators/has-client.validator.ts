@@ -6,7 +6,7 @@ import {
   ValidatorOptions,
   registerDecorator,
 } from 'class-validator';
-import { ClientRepository } from 'src/data/dababase/repositories/client.repository';
+import { ClientRepository } from 'src/data/dababase/repositories/client/client.repository';
 
 @ValidatorConstraint({ name: 'HasClientValidator', async: true })
 @Injectable()

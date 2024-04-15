@@ -1,4 +1,4 @@
-import { ClientRepository } from './../../data/dababase/repositories/client.repository';
+import { ClientRepository } from '../../data/dababase/repositories/client/client.repository';
 import { Injectable } from '@nestjs/common';
 import { ClientServiceContract } from './contract/client-service-contract';
 import { FindClientResponseDto } from './contract/dto/response/find-client.response';

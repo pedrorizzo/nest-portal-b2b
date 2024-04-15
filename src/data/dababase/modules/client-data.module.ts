@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ClientEntity } from '../entities/client.entity';
-import { ClientRepository } from '../repositories/client.repository';
+import { ClientEntity } from '../entities/client/client.entity';
+import { ClientRepository } from '../repositories/client/client.repository';
 
 @Module({
   imports: [TypeOrmModule.forFeature([ClientEntity])],

@@ -13,7 +13,7 @@ export abstract class BaseEntity extends TypeormBaseEntity {
   /**
    *  Primary key (strategy must be override)
    */
-  id: string;
+  id?: string;
 }
 
 export abstract class CustomBaseEntity extends BaseEntity {
